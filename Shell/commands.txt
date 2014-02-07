@@ -1,2 +1,5 @@
 # check if there are any error transactions in jmeter csv file
 grep "number of failing samples : [1-9]" *.csv
+
+# check if jmeter is running
+ps -aef | grep jmeter
