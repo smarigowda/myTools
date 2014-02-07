@@ -12,7 +12,7 @@ my $i = $batch_file_start;
 while ($i < $batch_file_end) {
 	$i = $i + 1;
 	# Create a new Excel workbook
-	my $file_name = sprintf("forload_gedu_student_batch_%06d.xlsx", $i);
+	my $file_name = sprintf("for_demo_batch_%06d.xlsx", $i);
 	printf $file_name;
 	printf "\n";
 	my $workbook = Excel::Writer::XLSX->new( $file_name );
