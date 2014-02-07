@@ -3,3 +3,13 @@ grep "number of failing samples : [1-9]" *.csv
 
 # check if jmeter is running
 ps -aef | grep jmeter
+
+# list container ids
+docker ps -a | cut -d" " -f1
+
+# kill all containers
+docker ps -a | cut -d" " -f1 | xargs docker rm
+
+-- kill all jmeter instances
+ps -aef | grep jmx | awk  '{ print $2 }' | xargs kill -9
+
