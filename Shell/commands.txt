@@ -13,3 +13,6 @@ docker ps -a | cut -d" " -f1 | xargs docker rm
 -- kill all jmeter instances
 ps -aef | grep jmx | awk  '{ print $2 }' | xargs kill -9
 
+-- Simple web server
+python -m SimpleHTTPServer 7777 &
+
