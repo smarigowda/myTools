@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="2" it="0" lt="0" ts="1382644334955" s="true" lb="USER_NAME = SDPAT01 PASSWORD = Password1" rc="200" rm="OK" tn="Thread Group - Prepay 1-1" dt="text" by="241" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644334991" s="true" lb="USER_NAME = TEST1302A PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-2" dt="text" by="242" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="1" it="0" lt="0" ts="1382644335040" s="true" lb="USER_NAME = ecarepat01 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-3" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="1" it="0" lt="0" ts="1382644335091" s="true" lb="USER_NAME = ecarepat02 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-4" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335141" s="true" lb="USER_NAME = SDPAT01 PASSWORD = Password1" rc="200" rm="OK" tn="Thread Group - Prepay 1-5" dt="text" by="241" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335191" s="true" lb="USER_NAME = TEST1302A PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-6" dt="text" by="242" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335241" s="true" lb="USER_NAME = ecarepat01 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-7" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335303" s="true" lb="USER_NAME = ecarepat02 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-8" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="1" it="0" lt="0" ts="1382644335360" s="true" lb="USER_NAME = SDPAT01 PASSWORD = Password1" rc="200" rm="OK" tn="Thread Group - Prepay 1-9" dt="text" by="241" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335411" s="true" lb="USER_NAME = TEST1302A PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-10" dt="text" by="242" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335461" s="true" lb="USER_NAME = ecarepat01 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-11" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335510" s="true" lb="USER_NAME = ecarepat02 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-12" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335561" s="true" lb="USER_NAME = SDPAT01 PASSWORD = Password1" rc="200" rm="OK" tn="Thread Group - Prepay 1-13" dt="text" by="241" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="1" it="0" lt="0" ts="1382644335611" s="true" lb="USER_NAME = TEST1302A PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-14" dt="text" by="241" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335660" s="true" lb="USER_NAME = ecarepat01 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-15" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335711" s="true" lb="USER_NAME = ecarepat02 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-16" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335760" s="true" lb="USER_NAME = SDPAT01 PASSWORD = Password1" rc="200" rm="OK" tn="Thread Group - Prepay 1-17" dt="text" by="241" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335810" s="true" lb="USER_NAME = TEST1302A PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-18" dt="text" by="241" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335860" s="true" lb="USER_NAME = ecarepat01 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-19" dt="text" by="242" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ts="1382644335910" s="true" lb="USER_NAME = ecarepat02 PASSWORD = testing1" rc="200" rm="OK" tn="Thread Group - Prepay 1-20" dt="text" by="243" ng="1" na="1">
+  <samplerData class="java.lang.String">JMeterVariables
+</samplerData>
+</sample>
+
+</testResults>
