@@ -20,7 +20,11 @@
 		var datafile = 'http://localhost:8888/JavaScript/data/view_results_tree.jtl.xml';
 		d3.xml(datafile, function(data) { 
 			xmldata = data; 
+			
+
 			console.log(data);
+
+
 			console.dir(data);
 
 			// Example usage: Process all Text nodes on the page
@@ -37,10 +41,12 @@
 
 			walkTheDOM(xmldata, function (node) {
 			    if (node.nodeType === 1) { // Is it an Element Node
-			    	if (node.nodeName === 'sample') {
-			    		if (+node.attributes[0].nodeValue > 10000) { // Response Time
+			    	// if (node.nodeName === 'sample') {
+			    	if (node.nodeName === 'httpSample') {
+			    		if (+node.attributes[0].nodeValue > 5000) { // Response Time
 			            	console.log(node.attributes[5]); // Label
 			            	console.log(node.attributes[0].nodeValue); // Response Time Value
+			            	console.log(node.parentNode);
 			            }
 			        }
 			    }
