@@ -7,6 +7,8 @@
 
 	<script>
 
+		var filterdata = [];
+
 		function walkTheDOM(node, func) {
 		    func(node);
 		    node = node.firstChild;
@@ -43,10 +45,16 @@
 			    if (node.nodeType === 1) { // Is it an Element Node
 			    	// if (node.nodeName === 'sample') {
 			    	if (node.nodeName === 'httpSample') {
-			    		if (+node.attributes[0].nodeValue > 5000) { // Response Time
-			            	console.log(node.attributes[5]); // Label
-			            	console.log(node.attributes[0].nodeValue); // Response Time Value
-			            	console.log(node.parentNode);
+			    		if (+node.attributes[0].nodeValue > 500) { // Response Time
+
+			            	console.log(node.attributes[3].nodeValue); // ts timeStamp
+			            	// console.log(node.attributes[5].nodeValue); // lb Label
+			            	console.log(node.attributes[6].nodeValue); // rc Return Code
+			            	// console.log(node.attributes[0].nodeValue); // Response Time Value
+			            	// console.log(node.parentNode);
+
+			            	filterdata.push({name: node.attributes[3].nodeValue, 
+			            						value: node.attributes[6].nodeValue});
 			            }
 			        }
 			    }
