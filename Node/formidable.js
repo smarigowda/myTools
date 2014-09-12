@@ -1,8 +1,8 @@
-var formidable = require('formidable'),
-    http = require('http'),
-    util = require('util');
+var formidable = require('formidable');
+var http = require('http');
+var util = require('util');
 
-http.createServer(function(req, res) {
+var server = http.createServer(function(req, res) {
   if (req.url == '/upload' && req.method.toLowerCase() == 'post') {
     // parse a file upload
     var form = new formidable.IncomingForm();
@@ -30,4 +30,6 @@ http.createServer(function(req, res) {
     '<input type="submit" value="Upload">'+
     '</form>'
   );
-}).listen(8080);
+}).listen(1337, function() { console.log('listen callback...'); });
+
+server.on('listening', function() { console.log('server is listening now...'); });
