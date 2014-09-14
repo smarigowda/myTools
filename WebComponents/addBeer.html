@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  <script src="./polymer-tutorial-master/components/polymer/polymer.js"></script>
+  <script src="./polymer-tutorial-master/components/platform/platform.js"></script>
+  <script src=""></script>
+    <template id="beerTemplate">
+      <img src="beer.jpg" height="300" width="300">
+      <span>Beer</span>
+      <script>alert('Beer...!');</script>
+    </template>
+
+  <button onClick="addBeer()">Add Beer</button>
+
+  <script>
+    function addBeer() {
+      var template = document.querySelector("#beerTemplate");
+      var element = template.content.cloneNode(true);
+      element.querySelector("span").textContent = "India Pale Ale...";
+      document.body.appendChild(element);
+    }
+  </script>
+
+  </body>
+</html>
