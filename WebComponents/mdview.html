@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="./polymer-tutorial-master/components/polymer/polymer.js"></script>
+    <script src="./polymer-tutorial-master/components/platform/platform.js"></script>
+  </head>
+
+  <body>
+
+    <template id="beerTemplate" bind="{{ beerInfo }}">
+      <input value="{{ beerName }}"> </input>
+      <img src="beer.jpg" width="25" height="50">
+      <span>{{ beerName }}</span><br />
+    </template>
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', addModel());
+
+      function addModel() {
+          var template = document.querySelector('#beerTemplate');
+          template.model = {
+            beerInfo: {
+              beerName: "Wheat"
+            }
+          }
+          // Platform.performMicrotaskCheckpoint();
+      }
+
+    </script>
+
+  </body>
+
+
+</html>
