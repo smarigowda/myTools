@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+Custom elements usage
+-->
+<html>
+
+  <head>
+    <script src="./polymer-tutorial-master/components/platform/platform.js"></script>
+    <link id="beer-item-import" rel="import" href="beer-item-element.html">
+  </head>
+
+  <body>
+    <beer-item>Porter</beer-item>
+    <script>
+      window.addEventListener('HTMLImportsLoaded', function() {
+          var beerE1 = new BeerItem();
+          beerE1.textContent = "Wheet Beer";
+          document.body.appendChild(beerE1);
+      });
+    </script>
+  </body>
+
+</html>

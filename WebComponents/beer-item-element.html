@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<!--
-Custom elements definition and usage
--->
-<html>
-
-  <head>
-    <script src="./polymer-tutorial-master/components/polymer/polymer.js"></script>
-    <script src="./polymer-tutorial-master/components/platform/platform.js"></script>
-  </head>
-
-  <body>
     <template id="beerTemplate">
       <img src="beer.jpg" width=300 height=400>
       <span><!-- content goes here --></span><br/>
@@ -17,8 +5,10 @@ Custom elements definition and usage
 
     <script>
       var BeerItemPrototype = Object.create(HTMLElement.prototype);
+
       BeerItemPrototype.createdCallback = function() {
-          var template = document.querySelector("#beerTemplate");
+          var link = document.querySelector("#beer-item-import");
+          var template = link.import.querySelector("#beerTemplate");
           var beerItem = template.content.cloneNode(true);
           var contentSpan = beerItem.querySelector("span");
           contentSpan.textContent = this.textContent; // text content of the custom element
@@ -36,14 +26,4 @@ Custom elements definition and usage
       var BeerItem = document.registerElement("beer-item", {
             prototype: BeerItemPrototype
       });
-
     </script>
-    <beer-item>Porter</beer-item>
-    <script>
-      var beerE1 = new BeerItem();
-      beerE1.textContent = "Wheet Beer";
-      document.body.appendChild(beerE1);
-    </script>
-  </body>
-
-</html>
