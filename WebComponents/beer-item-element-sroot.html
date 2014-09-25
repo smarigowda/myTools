@@ -1,19 +1,21 @@
     <template id="beerTemplate">
       <img src="beer.jpg" width=300 height=400>
-      <span><!-- content goes here --></span><br/>
+      <span>I am a span</span><br/>
     </template>
 
     <script>
+
+      debugger;
       var BeerItemPrototype = Object.create(HTMLElement.prototype);
 
       BeerItemPrototype.createdCallback = function() {
           var link = document.querySelector("#beer-item-import");
           var template = link.import.querySelector("#beerTemplate");
           var beerItem = template.content.cloneNode(true);
-          var contentSpan = beerItem.querySelector("span");
-          contentSpan.textContent = this.textContent; // text content of the custom element
-          this.textContent = '';
-          this.appendChild(beerItem);
+
+          // create a shadow root and append the element to it
+          var shadow = this.createShadowRoot();
+          shadow.appendChild(beerItem);
 
           // to allow setting content via script
           Object.defineProperty(this, 'textContent', {
@@ -21,10 +23,6 @@
                   contentSpan.textContent = inValue;
               }
           });
-
-          // var root = this.createShadowRoot();
-          // root.appendChild(beerItem);
-
       }
 
       var BeerItem = document.registerElement("beer-item", {

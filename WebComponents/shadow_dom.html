@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--
+Custom elements usage
+-->
+<html>
+  <head>
+    <script src="./polymer-tutorial-master/components/platform/platform.js"></script>
+  </head>
+  <body>
+     <button>Hello World</button>
+     <script>
+       var host = document.querySelector("button");
+       var root = host.createShadowRoot();
+       root.textContent = 'こんにちは、影の世界!';
+     </script>
+  </body>
+</html>

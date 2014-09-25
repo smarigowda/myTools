@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Custom elements usage
+-->
+<html>
+  <head>
+    <script src="./polymer-tutorial-master/components/platform/platform.js"></script>
+  </head>
+  <body>
+    <div id="nameTag">Santosh</div>
+    <input name="nameInput" value="Shellie"></input>
+    <button onclick="updateClicked('#nameTag', 'input[name=nameInput]');">Update</button>
+
+    <template id="nameTagTemplate">
+      <style>
+        .outer {
+          border: 2px solid brown;
+          border-radius: 1em;
+          background: red;
+          font-size: 20pt;
+          width: 12em;
+          height: 7em;
+          text-align: center;
+        }
+        .boilerplate {
+          color: white;
+          font-family: sans-serief;
+          padding: 0.5em;
+        }
+        .name {
+          color: black;
+          background: white;
+          font-family: "Marker Felt", cursive;
+          font-size: 45pt;
+          padding-top: 0.2em;
+        }
+      </style>
+
+      <div class="outer">
+        <div class="boilerplate">
+          Hi! My Name Is...
+        </div>
+        <div class="name">
+          <content></content>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      var shadow = document.querySelector('#nameTag').createShadowRoot();
+      var templateClone = document.querySelector('#nameTagTemplate').content.cloneNode(true);
+      shadow.appendChild(templateClone);
+
+      function updateClicked(nameTagSelector, textBoxSelector) {
+          var text = document.querySelector(textBoxSelector);
+          document.querySelector(nameTagSelector).textContent = text.value;
+          text.value = '';
+          text.focus();
+      }
+    </script>
+
+  </body>
+</html>

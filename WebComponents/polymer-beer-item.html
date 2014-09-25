@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+Custom elements usage
+-->
+<html>
+
+  <head>
+    <script src="./polymer-tutorial-master/components/platform/platform.js"></script>
+    <script src="./polymer-tutorial-master/components/polymer/polymer.js"></script>
+  </head>
+
+  <body>
+      <polymer-element name="beer-item">
+
+          <template>
+            <img src='beer.jpg' width=100 height=100>
+            <span><content></content></span>
+            </br >
+          </template>
+
+          <script>Polymer('beer-item');</script>
+
+      </polymer-element>
+
+      <beer-item>Wheat Beer</beer-item>
+      <beer-item>Draught Beer</beer-item>
+      <beer-item>Chill Beer</beer-item>
+  </body>
+
+</html>

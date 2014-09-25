@@ -1,4 +1,5 @@
 package org.example;
+
 public class ExampleSenderOutput {
   public String m_operation;
   public String m_url; 
