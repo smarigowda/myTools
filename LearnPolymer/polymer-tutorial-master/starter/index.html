@@ -16,6 +16,7 @@
   <link rel="import" href="../components/core-toolbar/core-toolbar.html">
   <link rel="import" href="../components/paper-tabs/paper-tabs.html">
   <link rel="import" href="post-card.html">
+  <link rel="import" href="post-list.html">
 
   <style>
   html,body {
@@ -61,25 +62,33 @@ core-toolbar {
 </head>
 
 <body unresolved>
+  
   <core-header-panel>
+  
+    <!--  1. selected attribute gets updated automatically when the tab is selected. 
+          2. it is updated to have the name of selected tab -->
     <core-toolbar>
       <paper-tabs id="tabs" selected="all" self-end>
         <paper-tab name="all">All</paper-tab>
         <paper-tab name="favorites">Favorites</paper-tab>
       </paper-tabs>
     </core-toolbar>
-
-    <post-card>
-        <img width="70" height="70" 
-          src="../images/avatar-07.svg">
-        <h2>Another Developer</h2>
-        <p>I'm composing with shadow DOM!</p>
-    </post-card>
-
+  
+    <post-list show="all"></post-list>
+  
   </core-header-panel>
 
   <script>
+
     var tabs = document.querySelector('paper-tabs');
+    var list = document.querySelector('post-list');
+
+    // core-select is an event, fired when the tab is selected
+    tabs.addEventListener('core-select', function() {
+      // attributes of an element can be accessed using dot
+      debugger;
+      list.show = tabs.selected;
+    });
 
     tabs.addEventListener('core-select', function() {
       console.log("Selected: " + tabs.selected);
