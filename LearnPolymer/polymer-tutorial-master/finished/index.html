@@ -66,6 +66,7 @@
 
     <core-toolbar>
 
+      <!-- paper-tabs extends core-selector element -->
       <paper-tabs id="tabs" selected="all" self-end>
         <paper-tab name="all">All</paper-tab>
         <paper-tab name="favorites">Favorites</paper-tab>
@@ -83,6 +84,7 @@
   var tabs = document.querySelector('paper-tabs');
   var list = document.querySelector('post-list');
 
+  // core-select event is fired both when an item is selected or deselected. The isSelected detail property contains the selection state.
   tabs.addEventListener('core-select', function(e) {
     list.show = tabs.selected;
     console.log('core-select fired:');
@@ -92,7 +94,6 @@
     // console.log(e.detail);
     // console.log(e);
     console.log(e.detail.isSelected);
-
   });
   </script>
 </body>
