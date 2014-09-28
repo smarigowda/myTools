@@ -83,8 +83,16 @@
   var tabs = document.querySelector('paper-tabs');
   var list = document.querySelector('post-list');
 
-  tabs.addEventListener('core-select', function() {
+  tabs.addEventListener('core-select', function(e) {
     list.show = tabs.selected;
+    console.log('core-select fired:');
+    // console.log(tabs);
+    // console.dir(tabs);
+    // console.log(tabs.selected);
+    // console.log(e.detail);
+    // console.log(e);
+    console.log(e.detail.isSelected);
+
   });
   </script>
 </body>
