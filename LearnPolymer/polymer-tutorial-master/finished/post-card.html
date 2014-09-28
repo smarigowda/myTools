@@ -1,7 +1,7 @@
 <link rel="import" href="../components/polymer/polymer.html">
 <link rel="import" href="../components/core-icon-button/core-icon-button.html">
 
-<polymer-element name="post-card">
+<polymer-element name="post-card" attributes='favorite'>
   <template>
     <style>
     :host {
@@ -54,7 +54,7 @@
       on-tap="{{favoriteTapped}}">
     </core-icon-button>
 
-    <content></content>   
+    <content></content>
   </template>
   <script>
   Polymer({
@@ -62,13 +62,18 @@
       favorite: {
         value: false,
         reflect: true
+        // reflect: false
       }
     },
     favoriteTapped: function(event, detail, sender) {
       this.favorite = !this.favorite;
+      // this.favorite = true;
+      // A custom event, 
       this.fire('favorite-tap');
-      console.log(this);
-      console.dir(this);
+      // console.log(this);
+      // console.dir(this);
+      // console.log('element = post-card: event: tap');
+      // console.log(sender);
     }
   });
   </script>

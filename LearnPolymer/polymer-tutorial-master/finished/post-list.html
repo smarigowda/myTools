@@ -3,6 +3,7 @@
 <link rel="import" href="post-card.html">
 
 <polymer-element name="post-list" attributes="show">
+
   <template>
     <style>
     :host {
@@ -14,17 +15,20 @@
     }
     </style>
 
-    <post-service id="service" posts="{{posts}}"></post-service>
+    <post-service id="service" posts="{{posts2}}"></post-service>
     
+    <!-- hide if tab selected is favorite and the post.favorite is not true-->
     <div layout vertical center>
-      <template repeat="{{post in posts}}">
+      <template repeat="{{post in posts2}}">
         <post-card
           favorite="{{post.favorite}}"
           on-favorite-tap="{{handleFavorite}}"
           hidden?="{{show == 'favorites' && !post.favorite}}">
+
           <img src="{{post.avatar}}" width="70" height="70">
           <h2>{{post.username}}</h2>
           <p>{{post.text}}</p>
+        
         </post-card>
       </template>
     </div>
@@ -33,7 +37,13 @@
   <script>
   Polymer({
     handleFavorite: function(event, detail, sender) {
+      console.log('element = post-list, event: favorite-tap');
+      console.log(sender);
+     
       var post = sender.templateInstance.model.post;
+      // console.log(sender.templateInstance);
+      console.log(post);
+
       this.$.service.setFavorite(post.uid, post.favorite);
     }
   });

@@ -65,13 +65,11 @@
   <core-header-panel>
 
     <core-toolbar>
-
       <!-- paper-tabs extends core-selector element -->
       <paper-tabs id="tabs" selected="all" self-end>
         <paper-tab name="all">All</paper-tab>
         <paper-tab name="favorites">Favorites</paper-tab>
       </paper-tabs>
-
     </core-toolbar>
 
     <div class="container" layout vertical center>
@@ -90,7 +88,7 @@
     console.log('core-select fired:');
     // console.log(tabs);
     // console.dir(tabs);
-    // console.log(tabs.selected);
+    console.log('tabs.selected = ' + tabs.selected);
     // console.log(e.detail);
     // console.log(e);
     console.log(e.detail.isSelected);

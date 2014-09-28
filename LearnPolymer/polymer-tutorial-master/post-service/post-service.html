@@ -68,6 +68,8 @@
     },
     postsLoaded: function() {
       // Make a copy of the loaded data
+      // console.dir(this.$.ajax.response);
+      // console.dir(this.$.ajax.response.slice(0));
       this.posts = this.$.ajax.response.slice(0);
     },
     /** 
@@ -82,7 +84,7 @@
      */
     setFavorite: function(uid, isFavorite) {
       // no service backend, just log the change
-      console.log('Favorite changed: ' + uid + ", now: " + isFavorite);
+      console.log('Favorite changed, uid: ' + uid + ", now: " + isFavorite);
     }
   });
   </script>
