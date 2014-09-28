@@ -15,6 +15,7 @@
     }
     .card-header {
       margin-bottom: 10px;
+      margin-top: 10px;
     }
     polyfill-next-selector { content: '.card-header h2'; }
     .card-header ::content h2 {
@@ -66,6 +67,8 @@
     favoriteTapped: function(event, detail, sender) {
       this.favorite = !this.favorite;
       this.fire('favorite-tap');
+      console.log(this);
+      console.dir(this);
     }
   });
   </script>
