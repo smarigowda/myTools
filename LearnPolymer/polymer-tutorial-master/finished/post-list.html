@@ -15,11 +15,11 @@
     }
     </style>
 
-    <post-service id="service" posts="{{posts2}}"></post-service>
+    <post-service id="service" attrPosts="{{posts}}"></post-service>
     
     <!-- hide if tab selected is favorite and the post.favorite is not true-->
     <div layout vertical center>
-      <template repeat="{{post in posts2}}">
+      <template repeat="{{post in posts}}">
         <post-card
           favorite="{{post.favorite}}"
           on-favorite-tap="{{handleFavorite}}"
@@ -38,11 +38,11 @@
   Polymer({
     handleFavorite: function(event, detail, sender) {
       console.log('element = post-list, event: favorite-tap');
-      console.log(sender);
+      console.dir(sender);
      
       var post = sender.templateInstance.model.post;
       // console.log(sender.templateInstance);
-      console.log(post);
+      console.dir(post);
 
       this.$.service.setFavorite(post.uid, post.favorite);
     }

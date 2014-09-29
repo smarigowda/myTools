@@ -47,7 +47,7 @@
   @type Array
   @default []
 -->
-<polymer-element name="post-service" attributes="posts">
+<polymer-element name="post-service" attributes="attrPosts">
   <template>
     <style>
     :host {
@@ -64,13 +64,13 @@
   <script>
   Polymer('post-service', {
     created: function() {
-      this.posts = [];
+      this.attrPosts = [];  // initialise it to be an array
     },
     postsLoaded: function() {
       // Make a copy of the loaded data
       // console.dir(this.$.ajax.response);
       // console.dir(this.$.ajax.response.slice(0));
-      this.posts = this.$.ajax.response.slice(0);
+      this.attrPosts = this.$.ajax.response.slice(0);
     },
     /** 
      * Update the service with the current favorite value.
