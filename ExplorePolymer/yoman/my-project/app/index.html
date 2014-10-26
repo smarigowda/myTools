@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Polymer WebApp</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/spastyles.css">
+  <!-- endbuild-->
+
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/core-menu/core-menu.html">
+  <link rel="import" href="bower_components/paper-item/paper-item.html">
+  <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
+  <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
+  <link rel="import" href="bower_components/flatiron-director/flatiron-director.html">
+  <!-- build:vulcanized elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <!-- endbuild-->
+</head>
+
+<body unresolved fullbleed>
+  <template is="auto-binding">
+      <flatiron-director route="{{route}}" autoHash></flatiron-director>
+      <core-scaffold id="scaffold">
+        <nav>
+          <core-toolbar><span>Single Page Polymer</span></core-toolbar>
+          <core-menu valueattr="hash" selected="{{route}}">
+            <template repeat="{{page in pages}}">
+              <paper-item label="{{page.name}}" hash="{{page.hash}}" icon="label-outline">
+                <a href="#{{page.hash}}"></a>
+              </paper-item>
+            </template>
+          </core-menu>
+        </nav>
+
+        <core-toolbar tool flex>
+          <div flex>Application</div>
+          <core-icon-button icon="refresh"></core-icon-button>
+          <core-icon-button icon="add"></core-icon-button>
+        </core-toolbar>
+        <div layout horizontal center-center fit>
+            <core-animated-pages valueattr="hash" selected="{{route}}" transitions="slide-from-right">
+              <template repeat="{{page in pages}}">
+                <section hash="{{page.hash}}" layout vertical center-center>
+                  <div>{{page.name}}</div>
+                </section>
+              </template>
+            </core-animated-pages>
+        </div>
+      </core-scaffold>
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  <script>
+    
+    var template = document.querySelector('template[is="auto-binding"]');
+    
+    template.pages = [
+      {name: 'Single', hash: 'one'},
+      {name: 'page', hash: 'two'},
+      {name: 'app', hash: 'three'}
+    ];
+
+  </script>
+  <!-- endbuild-->
+</body>
+
+</html>
