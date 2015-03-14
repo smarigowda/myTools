@@ -7,10 +7,16 @@ var assert = require('assert'),
 test.describe('Google Search', function() {
   var driver;
 
+
   test.before(function() {
     driver = new webdriver.Builder()
-                          .forBrowser('firefox')
+                          // .forBrowser('firefox')
+                          .forBrowser('chrome')
                           .build();
+  });
+
+  test.after(function() {
+    driver.quit();
   });
 
   test.it('should open home page', function() {
@@ -22,23 +28,29 @@ test.describe('Google Search', function() {
     });
   });
 
-  test.it('search videos', function() {
-    driver.findElement(By.name('btnG')).click();
-    // driver.wait(until.titleIs('webdriver - Google Search'), 10000);
-    driver.wait(until.elementsLocated(By.linkText('Videos')), 10000);
-    // driver.wait(until.elementsLocated(By.js("document.getElementById('lst-ib')")), 10000);
 
+  test.it('should search videos', function() {
+    driver.findElement(By.name('btnG')).click();
+    driver.wait(until.elementsLocated(By.linkText('Videos')), 10000);
     driver.findElement(By.linkText('Videos')).click();
-   
-    driver.wait(until.elementsLocated(By.css('input[aria-label="Search Videos"]')), 30000);
-    // driver.wait(until.elementsLocated(By.id('resultStats')), 10000);
-    var inputBox = driver.findElement(By.css('input[aria-label="Search Videos"]'));
+
+    var cssLoc = By.css('input[aria-label="Search Videos"]');
+
+    driver.wait(until.elementsLocated(cssLoc), 10000);
+    var inputBox = driver.findElement(cssLoc);
     inputBox.getAttribute('aria-label').then(function(value) {
       assert.equal(value, 'Search Videos');
     });
-    // console.log(videosLink);
-    // driver.wait(until.elementLocated(By.id('foogjhgjhghkg')), 100000);
-    driver.quit();
   });
+
+
+  test.it('sould search for images', function() {
+    driver.wait(until.elementsLocated(By.linkText('Images')), 10000);
+    var element = driver.findElement(By.xpath('//a[text()="Images"]'));
+    driver.findElement(By.linkText('Images')).click();
+    // var element = driver.findElement(By.xpath('//a[text()="Web"]'));
+    driver.wait(until.stalenessOf(element), 20000);
+    // driver.wait(until.elementIsDisabled(element), 20000);
+  })
 
 });
