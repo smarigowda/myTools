@@ -1,0 +1,15 @@
+{
+  "name": "NCC",
+  "version": "0.0.0",
+  "description": "",
+  "main": "test_googleSearch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santosh Marigowda",
+  "license": "ISC",
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "selenium-webdriver": "^2.45.1"
+  }
+}
