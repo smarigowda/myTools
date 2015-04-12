@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<link rel="import" href="quick-alert.html">
+		<style>
+			.line {
+			  fill: none;
+			  stroke: steelblue;
+			  stroke-width: 1.5px;
+			}
+			rect:hover {
+			    fill: orange;
+			}
+			body {
+			  font: 10px sans-serif;
+			}
+			.axis path,
+			.axis line {
+			  fill: none;
+			  stroke: #000;
+			  shape-rendering: crispEdges;
+			}
+			.bar {
+			  fill: steelblue;
+			}
+			.grid .tick {
+			    stroke: lightgrey; opacity: 0.7;
+			}
+			.grid path {
+			    stroke-width: 0;
+			}
+			body {
+			  font: 10px sans-serif;
+			}
+		</style>
+
+	<head>
+	<jm-throughput></jm-throughput>
+
+</html>
