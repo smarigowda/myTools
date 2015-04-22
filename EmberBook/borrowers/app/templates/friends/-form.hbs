@@ -1,0 +1,19 @@
+<!-- 'edit' and 'new' routes are going to use this partial -->
+<!-- when the use clicks on Save button, call save method on the controller, save method is common to both edit and new -->
+<form {{ action "save" on="submit" }}>
+	<p>
+		<p><label> First Name: {{ input value=model.firstName }} </label></p>
+		<p><label> Last Name: {{ input value=model.lastName }} </label></p>
+		<p><label> Email: {{ input value=model.email }} </label></p>
+		<p><label> Twitter: {{ input value=model.twitter }} </label></p>
+	</p>
+	<div>
+		<h2>Friend Details</h2>
+		<p>{{ model.firstName }}</p>
+		<p>{{ model.lastName }}</p>
+	</div>
+
+	<input type="submit" value="Save" class="primary">
+	<h2>{{errorMessage}}</h2>
+	<button {{ action "cancel" model }}>Cancel</button>
+</form>

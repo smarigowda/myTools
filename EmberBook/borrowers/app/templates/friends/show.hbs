@@ -1,0 +1,14 @@
+<div class="friend-profile">
+	<p>{{model.firstName}}</p>
+	<p>{{model.lastName}}</p>
+	<p>{{model.email}}</p>
+	<p>{{model.twitter}}</p>
+</div>
+{{link-to "Lend Article" "articles.new"}}
+{{link-to "edit" "friends.edit" model}}
+<a href="#" {{action "delete" model}}>delete</a>
+
+<div class="articles-container">
+	{{outlet}}
+</div>
+
