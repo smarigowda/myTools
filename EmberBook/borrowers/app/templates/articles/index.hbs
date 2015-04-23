@@ -2,18 +2,13 @@
 <table class="primary">
 <thead>
 	<th>Description</th>
+	<th>Notes</th>
 	<th>Borrowed Since</th>
-	<th></th>
-	<th></th>
+	<th>Status</th>
 </thead>
 <tbody>
 	{{#each model as |article|}}
-	<tr>
-		<td>{{article.description}}</td>
-		<td>{{article.createdAt}}</td>
-		<td></td>
-		<td></td>
-	</tr>
+	   {{articles/article-row article=article articleStates=possibleStates}}
 	{{/each}}
 </tbody>
 </table>

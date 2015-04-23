@@ -7,6 +7,8 @@ export default Ember.Controller.extend({
 			if (this.get('isValid')) {
 				console.log('isValid = true');
 				var mymodel = this.get('model');
+				console.log('mymodel');
+				console.log(mymodel);
 				this.get('logmodel')(mymodel);
 				this.get('model').save().then( 
 					friend => {
