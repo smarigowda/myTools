@@ -32,5 +32,8 @@ app.import('vendor/fontello/font/fontello.woff', {
 });
 app.import('bower_components/picnic/releases/picnic.min.css');
 app.import('bower_components/moment/moment.js');
+app.import('bower_components/borrowers-dates/index.js');
+// app.import('bower_components/ic-ajax/dist/named-amd/main.js');
+
 
 module.exports = app.toTree();
